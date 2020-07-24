@@ -1,0 +1,39 @@
+<div class="header-container">
+  <div class="logo-container">
+
+      <img src="assets/images/icon.png" alt="">
+    
+    <a class="logo" href="#" (click)="navigateHome()"><strong>CONVOCA</strong><span> DATOS</span></a>
+  </div>
+  <!--<nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
+    <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+  </nb-select>-->
+</div>
+
+<div class="header-container">
+  <nb-actions size="small">
+    <nb-action class="control-item">
+      <a class="encabezado" href="">Inicio</a>
+    </nb-action>
+    <nb-action class="control-item">
+      <a class="encabezado" href="">Nosotros</a>
+    </nb-action>
+    <nb-action class="control-item">
+      <a class="encabezado" href="" >Contacto</a>
+    </nb-action>
+    <nb-action class="control-item">
+      <img class="user-icon" src="assets/images/user.png" alt="">
+      <a class="encabezado-1" href=""> Ingresar</a>
+    </nb-action>
+    <nb-action class="control-item">
+      <button nbButton status="danger">UNIRSE A NUESTRA COMUNIDAD</button>
+    </nb-action>
+    <!--<nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+      <nb-user [nbContextMenu]="userMenu"
+               [onlyPicture]="userPictureOnly"
+               [name]="user?.name"
+               [picture]="user?.picture">
+      </nb-user>
+    </nb-action>-->
+  </nb-actions>
+</div>

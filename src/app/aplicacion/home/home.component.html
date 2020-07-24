@@ -1,0 +1,107 @@
+<body>
+  <div class="bg">
+    <h1 class="text-bg">Resultados de Búsqueda</h1>
+    <p class="text-bg-1">Inicio   /   Buscar   /   Empresas</p>
+  </div>  
+</body>
+<div class="row">
+  <div class="col-xxxl-12 col-md-12">
+    <nb-card size="giant">
+     <nb-card-header>
+       <div class="row contenedor">
+         <div class="col-lg-3 text-filtrar"> 
+            <label >Filtrar Resultados</label>
+         </div>
+         <div class="col-lg-8">
+           <div class="row">
+            <i class="fa fa-industry"></i>
+            <div class="form-group encabezado col-lg-3">
+             <label class="label">Actividad Economica</label>
+             <nb-select size="small" placeholder="Buscar..." fullWidth>
+               <nb-option value="1">Todo</nb-option>
+               <nb-option value="2">Minería</nb-option>
+             </nb-select>
+            </div>
+            <i class="fa fa-building"></i>
+            <div class="form-group encabezado col-lg-2">
+             <label class="label">Empresas</label>
+             <nb-select size="small" placeholder="Buscar..." fullWidth>
+               <nb-option value="1">Minera Yanacocha</nb-option>
+               <nb-option value="2">Azgard Minera</nb-option>
+               <nb-option value="2">Asoación Minera SA</nb-option>
+             </nb-select>
+            </div>
+            <i class="fa fa-map-marker"></i>
+            <div class="form-group encabezado col-lg-2">
+             <label class="label">Región</label>
+             <nb-select size="small"  placeholder="Buscar..." fullWidth>
+               <nb-option value="1">Apurimac</nb-option>
+               <nb-option value="2">Cusco</nb-option>
+               <nb-option value="3">Lima</nb-option>
+             </nb-select>
+            </div>
+            <i class="fa fa-calendar"></i>
+            <div class="form-group encabezado col-lg-2">
+             <label class="label">Año</label>
+             <nb-select size="small"  placeholder="Buscar..." fullWidth>
+               <nb-option value="1">2020</nb-option>
+               <nb-option value="2">2019</nb-option>
+               <nb-option value="2">2018</nb-option>
+               <nb-option value="2">2017</nb-option>
+               <nb-option value="2">2016</nb-option>
+             </nb-select>
+            </div>
+           </div>
+         </div>
+         <div class="col-lg-1 button-limpiar">
+           <div class="buttons-row">
+            <button class="color-button" nbButton  >LIMPIAR</button>
+          </div>
+         </div>
+       </div>
+     </nb-card-header>
+     <nb-card-body>
+      <div class="row">
+        <div class="col-lg-4">
+           <nb-card>
+             <nb-card-body>
+               <div class="form-group coincidencias">
+                  <button  nbButton >ENCONTRAR COINCIEDENCIAS CON MIS DATOS</button>
+               </div>
+             </nb-card-body>
+           </nb-card>
+        </div>
+        <div class="col-lg-8">
+          <nb-card>
+            <nb-card-body>
+              <div class="row">
+                <div class="col-sm-2">
+                  <div class="form-group coincidencias-1">
+                    
+                    <label >Muy Infractora</label>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="form-group coincidencias-1">
+                    <label >Medianamente Infractora</label>
+                  </div>
+                </div>
+                <div class="col-sm 2">
+                  <div class="form-group coincidencias-1 ">
+                    <label >Sin Infracciones</label>
+                  </div>
+                </div>
+                 <div class="col-sm-2">
+                  <div class="form-group coincidencias-1 ">
+                    <label >Ver Cifras</label>
+                  </div>
+                 </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+       </div>
+      </div>
+     </nb-card-body>
+    </nb-card>
+  </div>
+</div>
