@@ -1,0 +1,176 @@
+
+<div class="row">
+    <div class="bg col-xxxl-12">
+      <h1 class="text-bg">Resultados de Búsqueda</h1>
+      <p class="text-bg-1">Inicio   /   Buscar   /   Empresas</p>
+    </div>
+    <div class="col-xxxl-12">
+      <nb-card size="giant">
+       <nb-card-body>
+        <div class="row">
+          <div class="col-lg-3 text-filtrar"> 
+             <label class="text-label" >Filtrar Resultados</label>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+             <i class="fa fa-industry"></i>
+             <div class="form-group encabezado col-lg-3">
+              <label class="label">Actividad Economica</label>
+              <nb-select size="small" placeholder="Buscar..." fullWidth>
+                <nb-option value="1">Todo</nb-option>
+                <nb-option value="2">Minería</nb-option>
+              </nb-select>
+             </div>
+             <i class="fa fa-building"></i>
+             <div class="form-group encabezado col-lg-2">
+              <label class="label">Empresas</label>
+              <nb-select size="small" placeholder="Buscar..." fullWidth>
+                <nb-option value="1">Minera Yanacocha</nb-option>
+                <nb-option value="2">Azgard Minera</nb-option>
+                <nb-option value="2">Asoación Minera SA</nb-option>
+              </nb-select>
+             </div>
+             <i class="fa fa-map-marker"></i>
+             <div class="form-group encabezado col-lg-2">
+              <label class="label">Región</label>
+              <nb-select size="small"  placeholder="Buscar..." fullWidth>
+                <nb-option value="1">Apurimac</nb-option>
+                <nb-option value="2">Cusco</nb-option>
+                <nb-option value="3">Lima</nb-option>
+              </nb-select>
+             </div>
+             <i class="fa fa-calendar"></i>
+             <div class="form-group encabezado col-lg-2">
+              <label class="label">Año</label>
+              <nb-select size="small"  placeholder="Buscar..." fullWidth>
+                <nb-option value="1">2020</nb-option>
+                <nb-option value="2">2019</nb-option>
+                <nb-option value="2">2018</nb-option>
+                <nb-option value="2">2017</nb-option>
+                <nb-option value="2">2016</nb-option>
+              </nb-select>
+             </div>
+            </div>
+          </div>
+          <div class="col-lg-1 button-limpiar">
+            <div class="buttons-row">
+             <button class="color-button" nbButton  >LIMPIAR</button>
+           </div>
+          </div>
+        </div>
+        <div class="horizontal-line"></div>
+        <div class="row">
+          <div class="col-lg-4">
+             <nb-card>
+               <nb-card-body>
+                 <div class="form-group coincidencias">
+                    <button  nbButton >ENCONTRAR COINCIEDENCIAS CON MIS DATOS</button>
+                 </div>
+               </nb-card-body>
+             </nb-card>
+          </div>
+          <div class="col-lg-8">
+            <nb-card>
+              <nb-card-body>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <div class="form-group coincidencias-1">
+                      <img class="icon" src="assets/images/danger.png" alt="">
+                      <label >Muy Infractora</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-group coincidencias-1">
+                      <img class="icon" src="assets/images/warning.png" alt="">
+                      <label >Medianamente Infractora</label>
+                    </div>
+                  </div>
+                  <div class="col-sm 2">
+                    <div class="form-group coincidencias-1 ">
+                      <img class="icon" src="assets/images/success.png" alt="">
+                      <label >Sin Infracciones</label>
+                    </div>
+                  </div>
+                   <div class="col-sm-2">
+                    <div class="form-group coincidencias-1 ">
+                      <label >Ver Cifras</label>
+                    </div>
+                   </div>
+                </div>
+              </nb-card-body>
+            </nb-card>
+         </div>
+         <div class="col-lg-4">
+           <div class="row">
+             <div class="col-md-12">
+              <nb-card>
+                <nb-card-header>
+                  <div class="row">
+                    <div class="form-group col-lg-2">
+                      <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="form-group encabezado col-lg-9">
+                     <label class="label">Buscar en el Mapa</label>
+                     <nb-select placeholder="Ver en el Mapa..." fullWidth>
+                       <nb-option value="1">Infracciones Ambientales</nb-option>
+                       <nb-option value="2">Infraccionse laborales</nb-option>
+                       <nb-option value="2">Accidentes laborales</nb-option>
+                     </nb-select>
+                    </div>
+                  </div>
+                </nb-card-header>
+                <nb-card-body>
+                  <div echarts [options]="options" class="echarts"></div>
+                </nb-card-body>
+              </nb-card>
+             </div>
+             <div class="col-md-12">
+                   <nb-card>
+                     <nb-card-header>
+                       Compartir en redes: 
+                     </nb-card-header>
+                     <nb-card-body>
+                      <div class="socials">
+                        <a href="#" target="_blank" class="ion ion-social-github"></a>
+                        <a href="#" target="_blank" class="ion ion-social-facebook"></a>
+                        <a href="#" target="_blank" class="ion ion-social-twitter"></a>
+                        <a href="#" target="_blank" class="ion ion-social-linkedin"></a>
+                      </div>
+                     </nb-card-body>
+                   </nb-card>
+             </div>
+           </div>
+            
+         </div>
+         <div class="col-lg-8">
+           <nb-card>
+             <nb-card-body>
+              <mat-table #table [dataSource]="dataSource" matSort>
+                <ng-container matColumnDef="Empresa">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Empresa </mat-header-cell>
+                  <mat-cell *matCellDef="let row" data-label="Empresa"> 
+                    <i class="fa fa-building"></i>
+                    {{row.Nombre}} </mat-cell>
+                 </ng-container>
+                 <ng-container matColumnDef="IA">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Infracciones <br> Ambientales </mat-header-cell>
+                  <mat-cell *matCellDef="let row" data-label="IA"> {{row.IA}} </mat-cell>
+                 </ng-container>
+                 <ng-container matColumnDef="Multa">
+                  <mat-header-cell *matHeaderCellDef mat-sort-header> Multas </mat-header-cell>
+                  <mat-cell *matCellDef="let row" data-label="Multa"> {{row.Multa}} </mat-cell>
+                 </ng-container>
+                 <br>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+              </mat-table>
+              <mat-paginator [pageSizeOptions]="[11]"></mat-paginator>
+             </nb-card-body>
+           </nb-card>
+         </div>
+        </div>
+       </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
