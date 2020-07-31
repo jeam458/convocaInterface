@@ -29,6 +29,11 @@
     padding: 0!important;
   }
 
+  .vertical-line{
+    border-right:2px solid nb-theme(divider-color);
+    margin: 0em 0em;
+  }
+
   .header-container {
     display: flex;
     align-items: center;

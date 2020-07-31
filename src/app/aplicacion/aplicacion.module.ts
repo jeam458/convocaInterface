@@ -31,6 +31,7 @@ import {
   import { MultasComponent} from './multas/multas.component';
   import { Multas1Component} from './multas1/multas1.component';
   import { AfectadosComponent} from './afectados/afectados.component';
+import { PartnerComponent } from './partner/partner.component';
 
 
   @NgModule({
@@ -68,7 +69,8 @@ import {
           Busqueda1Component,
           MultasComponent,
           Multas1Component,
-          AfectadosComponent
+          AfectadosComponent,
+          PartnerComponent
       ],
       entryComponents:[
       ]

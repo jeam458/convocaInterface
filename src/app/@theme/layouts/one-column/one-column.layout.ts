@@ -13,7 +13,7 @@ import { WindowModeBlockScrollService } from '../../services/window-mode-block-s
         <ngx-header></ngx-header>
       </nb-layout-header>
 
-      <nb-layout-column>
+      <nb-layout-column >
         <ng-content select="router-outlet"></ng-content>
       </nb-layout-column>
 
