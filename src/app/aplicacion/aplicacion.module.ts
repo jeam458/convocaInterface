@@ -32,6 +32,7 @@ import {
   import { Multas1Component} from './multas1/multas1.component';
   import { AfectadosComponent} from './afectados/afectados.component';
 import { PartnerComponent } from './partner/partner.component';
+import { DatosEmpresaComponent } from './datos-empresa/datos-empresa.component';
 
 
   @NgModule({
@@ -70,7 +71,8 @@ import { PartnerComponent } from './partner/partner.component';
           MultasComponent,
           Multas1Component,
           AfectadosComponent,
-          PartnerComponent
+          PartnerComponent,
+          DatosEmpresaComponent
       ],
       entryComponents:[
       ]
