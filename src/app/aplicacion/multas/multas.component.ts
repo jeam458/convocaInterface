@@ -156,7 +156,6 @@ export class MultasComponent implements OnInit {
             ],
           };
         });
-
     }
 
   ngOnInit() {
