@@ -6,6 +6,7 @@ import { Busqueda1Component} from './busqueda1/busqueda1.component';
 import { MultasComponent} from './multas/multas.component';
 import { Multas1Component} from './multas1/multas1.component';
 import { AfectadosComponent} from './afectados/afectados.component';
+import { DatosEmpresaComponent} from './datos-empresa/datos-empresa.component';
 
 
 const routes:Routes = [
@@ -36,6 +37,10 @@ const routes:Routes = [
         {
             path:'afectados',
             component:AfectadosComponent
+        },
+        {
+            path:'empresa',
+            component:DatosEmpresaComponent
         }
     ]
     }

@@ -5,6 +5,8 @@ import { combineLatest } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
 import { NbThemeService } from '@nebular/theme';
 import { registerMap } from 'echarts';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Busqueda1Service} from '../../services/busqueda1.service';
 
 @Component({
   selector: 'ngx-multas1',
@@ -16,10 +18,11 @@ export class Multas1Component implements OnInit {
   @ViewChild(MatPaginator,{static: true}) paginator: MatPaginator;
   dataSource: MatTableDataSource<any>;
   displayedColumns:string[]=['Empresa','IA','Multa','Afectados'];
-  actEconomicas:any[]=[];
-  empresas:any[]=[]
-  regiones:any[]=[]
-  anios:any[]=[]
+  actEconomicas:any;
+  empresas:any;
+  regiones:any;
+  anios:any;
+  firstForm: FormGroup;
 
   //variables del mapa
   latlong: any = {};
@@ -55,7 +58,9 @@ export class Multas1Component implements OnInit {
   ]
 
   constructor( private theme: NbThemeService,
-               private http: HttpClient) {
+               private http: HttpClient,
+               private busquedaService:Busqueda1Service,
+               private fb: FormBuilder) {
                   
                 combineLatest([
                   this.http.get('assets/map/peru1.json'),
@@ -155,7 +160,11 @@ export class Multas1Component implements OnInit {
                 }
 
   ngOnInit() {
+    this.getActividades();
+    this.getEmpresas();
+    this.getRegiones();
     this.getMultas();
+    this.inicializarForm();
   }
 
   getMultas(){
@@ -163,6 +172,44 @@ export class Multas1Component implements OnInit {
     this.dataSource.sort=this.sort;
     this.dataSource.paginator=this.paginator;
    }
+
+   inicializarForm(){
+    this.firstForm= this.fb.group({
+      actividad:['',Validators.required],
+      empresa:['',Validators.required],
+      region:[''],
+      anio:['']
+    })
+  }
+
+  limpiarFiltros(){
+    this.firstForm.reset();
+  }
+
+  getActividades(){
+    this.busquedaService.getActividades().subscribe(res=>{
+      this.actEconomicas=res;
+      //console.log(res);
+    })
+  }
+  getEmpresas(){
+    this.busquedaService.getEmpresas().subscribe(data=>{
+      //console.log(data)
+      this.empresas=data;
+    })
+  }
+  getRegiones(){
+    this.busquedaService.getRegiones().subscribe(data=>{
+      //console.log(data)
+      this.regiones=data;
+    })
+  }
+  getAnios(){
+    this.busquedaService.getAnios().subscribe(data=>{
+      this.anios=data
+    })
+  }
+
 
    //colores de burbujas
    private getRandomGeoColor() {

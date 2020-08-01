@@ -1,0 +1,53 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+@import '../../@theme/styles/themes';
+
+i.fa {
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px #888;
+    width: 60px !important; 
+    height: 60px !important; 
+    padding: 1.5em 1.5em;
+    margin-right: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .contenedor{
+    margin-top: 10px;
+    padding-bottom:10px;
+  }
+
+  .text-filtrar{
+    margin: auto;
+    font-size: 18px;
+  }
+
+  .text-label{
+    margin-left: 30%;
+    font-size: 25px;
+  }
+
+  .vertical-line{
+    border-right:2px solid nb-theme(divider-color);
+    margin: 0em 0em;
+  }
+
+  .horizontal-line{
+    border-bottom:2px solid nb-theme(divider-color);
+    margin-bottom: 9px;
+  }
+
+  .button-limpiar{
+    margin: auto;
+    font-size: 18px;
+    
+    .color-button{
+      background-color: #0a0a0a;
+      border-color: #0e0e0e;
+      color: #ffffff;
+      
+      //background-color: #8e2abc;
+    }
+  }

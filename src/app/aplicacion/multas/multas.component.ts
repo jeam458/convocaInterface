@@ -61,7 +61,7 @@ export class MultasComponent implements OnInit {
   constructor(private theme: NbThemeService,
               private http: HttpClient,
               private busquedaService:Busqueda1Service,
-               private fb: FormBuilder) { 
+              private fb: FormBuilder) { 
      
       combineLatest([
         this.http.get('assets/map/peru1.json'),
@@ -159,7 +159,11 @@ export class MultasComponent implements OnInit {
     }
 
   ngOnInit() {
+    this.getActividades();
+    this.getEmpresas();
+    this.getRegiones();
     this.getMultas();
+    this.inicializarForm();
   }
 
 

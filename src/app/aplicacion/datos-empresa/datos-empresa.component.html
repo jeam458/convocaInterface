@@ -1,1 +1,160 @@
-<p>datos-empresa works!</p>
+       <div class="row">
+          <nb-card class="col-lg-12">
+            <nb-card-body>
+              <form [formGroup]="firstForm">
+                <div class="row">
+                  <div class="col-lg-3 text-filtrar"> 
+                    <label class="text-label" >Filtrar Resultados</label>
+                 </div>
+                 <div class="col-lg-8">
+                   <div class="row">
+                    <i class="fa fa-industry"></i>
+                    <div class="form-group encabezado col-lg-3">
+                     <label class="label">Actividad Economica</label>
+                     <nb-select size="small" placeholder="Buscar..." fullWidth formControlName="actividad">
+                       <nb-option *ngFor="let item of actEconomicas" [value]="item.sector_economico" >{{item.sector_economico}}</nb-option>
+                     </nb-select>
+                    </div>
+                    <i class="fa fa-building"></i>
+                    <div class="form-group encabezado col-lg-2">
+                     <label class="label">Empresas</label>
+                     <nb-select size="small" placeholder="Buscar..." fullWidth formControlName="empresa">
+                       <nb-option *ngFor="let item of empresas" [value]="item.ruc" >{{item.razon_social}}</nb-option>
+                     </nb-select>
+                    </div>
+                    <i class="fa fa-map-marker"></i>
+                    <div class="form-group encabezado col-lg-2">
+                     <label class="label">Región</label>
+                     <nb-select size="small"  placeholder="Buscar..." fullWidth formControlName="region">
+                       <nb-option *ngFor="let item of regiones" [value]="item.idregion" >{{item.region}}</nb-option>
+                     </nb-select>
+                    </div>
+                    <i class="fa fa-calendar"></i>
+                    <div class="form-group encabezado col-lg-2">
+                     <label class="label">Año</label>
+                     <nb-select size="small"  placeholder="Buscar..." fullWidth formControlName="anio">
+                       <nb-option value="1">2020</nb-option>
+                       <nb-option value="2">2019</nb-option>
+                       <nb-option value="2">2018</nb-option>
+                       <nb-option value="2">2017</nb-option>
+                       <nb-option value="2">2016</nb-option>
+                     </nb-select>
+                    </div>
+                   </div>
+                 </div>
+                 <div class="col-lg-1 button-limpiar">
+                   <div class="buttons-row">
+                    <button class="color-button" nbButton (click)="limpiarFiltros()"  >LIMPIAR</button>
+                  </div>
+                 </div>
+                </div>
+              </form>
+            </nb-card-body>
+          </nb-card>
+          <nb-card class="col-lg-12" >
+            <nb-card-header>
+              <div class="row">
+                <div class="col-lg-4">
+                  <h1>Mineria Yanacocha S.R.L</h1>
+                </div>
+                <div class="col-lg-4">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h3>ACTIVA</h3>
+                    </div>
+                    <div class="col-sm-6">
+                      <nb-icon icon="home-outline" ></nb-icon>
+                       RUC: 2010201123
+                       <br>
+                       <nb-icon icon="home-outline" ></nb-icon>
+                       INICIO DE ACTIVIDADES: 01/08/1992
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="row">
+                     <div class="col-sm-6">
+                      <button nbButton>ESTRUCTURA EMPRESARIAL</button>
+                     </div>
+                      <div class="col-sm-6">
+                        <button nbButton>RECIBIR NOTIFICACIONES</button>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </nb-card-header>
+            <nb-card-body>
+              <div class="row">
+                <div class="col-lg-4">
+                  <nb-card>
+                    <nb-card-body>
+                      <div class="row">
+                         <div class="col-sm-3">
+                          <i class="fa fa-building"></i>
+                         </div>
+                         <div class="col-sm-9">
+                            Representantes Legales
+                            <br>
+                            Ampudia Chavez Zoila Beatriz
+                            <br>
+                            (Desde:11/12/2008)
+                            <br>
+                            <br>
+                            Ampudia Chavez Zoila Beatriz
+                            <br>
+                            (Desde:11/12/2008)
+                         </div>
+                      </div>
+                    </nb-card-body>
+                 </nb-card>
+                </div>
+                <div class="col-lg-4">
+                  <nb-card>
+                    <nb-card-body>
+                      <div class="row">
+                         <div class="col-sm-3">
+                          <i class="fa fa-building"></i>
+                         </div>
+                         <div class="col-sm-9">
+                            Representantes Legales
+                            <br>
+                            Ampudia Chavez Zoila Beatriz
+                            <br>
+                            (Desde:11/12/2008)
+                            <br>
+                            <br>
+                            Ampudia Chavez Zoila Beatriz
+                            <br>
+                            (Desde:11/12/2008)
+                         </div>
+                      </div>
+                    </nb-card-body>
+                 </nb-card>
+                </div>
+                <div class="col-lg-4">
+                  <nb-card>
+                    <nb-card-body>
+                      <div class="row">
+                         <div class="col-sm-3">
+                          <i class="fa fa-building"></i>
+                         </div>
+                         <div class="col-sm-9">
+                            Representantes Legales
+                            <br>
+                            Ampudia Chavez Zoila Beatriz
+                            <br>
+                            (Desde:11/12/2008)
+                            <br>
+                            <br>
+                            Ampudia Chavez Zoila Beatriz
+                            <br>
+                            (Desde:11/12/2008)
+                         </div>
+                      </div>
+                    </nb-card-body>
+                 </nb-card>
+                </div>
+              </div>
+            </nb-card-body>
+          </nb-card>
+        </div>
